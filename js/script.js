@@ -20,6 +20,12 @@ reTries.setAttribute('id', 'reTries');
 reTries.append(reTriesMax);
 document.querySelector('#trailsLeft').appendChild(reTries);
 
+let highscoreNumber = 0;
+let highscoreValue = document.createElement('p');
+highscoreValue.setAttribute('id', 'highscoreValue');
+highscoreValue.append(highscoreNumber);
+document.querySelector('#highscore').appendChild(highscoreValue);
+
 checkButton.addEventListener('click', function () {
   let text;
   let insertedValue = Number(document.querySelector('#addNum').value);
@@ -46,6 +52,14 @@ checkButton.addEventListener('click', function () {
     hintFive.style.opacity = '0';
     hintSix.style.opacity = '0';
     hintEight.style.opacity = '0';
+
+    if (
+      document.querySelector('#reTries').textContent >
+      document.querySelector('#highscoreValue').textContent
+    ) {
+      document.querySelector('#highscoreValue').textContent =
+        document.querySelector('#reTries').textContent;
+    }
   } else if (!text) {
     errorita.style.opacity = '1';
     hintEight.style.opacity = '1';

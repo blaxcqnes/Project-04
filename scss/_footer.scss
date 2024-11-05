@@ -188,6 +188,8 @@
       }
 
       #highscore {
+        display: flex;
+        flex-direction: row;
         font-size: 18pt;
 
         @media (max-width: 499px) {
