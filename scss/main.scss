@@ -1,0 +1,38 @@
+@use './_mediaQuery.scss';
+@use './_container.scss';
+@use './_header.scss';
+@use './_midSec.scss';
+@use './_footer.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'arcade';
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  color: white;
+}
+
+@font-face {
+  font-family: arcade;
+  src: url(/fonts/arcade.ttf) format('truetype');
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  padding: 20pt;
+  background-color: rgb(25, 25, 25);
+  transition: all 0.2s ease;
+
+  @media (max-width: 499px) {
+    padding: 0;
+  }
+}

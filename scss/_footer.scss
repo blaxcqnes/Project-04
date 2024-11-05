@@ -1,0 +1,199 @@
+#footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: auto;
+  margin-top: 35pt;
+  padding-inline: 60pt;
+
+  @media (max-width: 649px) {
+    column-gap: 40pt;
+  }
+
+  @media (max-width: 499px) {
+    flex-direction: column;
+    row-gap: 18pt;
+    padding-inline: 20pt;
+    margin-top: 20pt;
+  }
+
+  @media (max-width: 349px) {
+    padding-inline: 10pt;
+  }
+
+  #input {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20pt;
+    align-items: center;
+
+    @media (max-width: 499px) {
+      row-gap: 15pt;
+    }
+
+    #inputContainer {
+      width: 120pt;
+      height: 55pt;
+
+      @media (max-width: 499px) {
+        height: 50pt;
+      }
+    }
+
+    #addNum {
+      width: 120pt;
+      height: 55pt;
+      padding-top: 6pt;
+      font-size: 40pt;
+      text-align: center;
+      background-color: #00000000;
+      border: 2pt solid white;
+      outline: none;
+      resize: none;
+    }
+
+    #check {
+      width: 100pt;
+      height: 40pt;
+      padding-top: 6pt;
+      font-size: 23pt;
+      font-weight: 700;
+      text-align: center;
+      color: #000000;
+      border: none;
+      cursor: pointer;
+
+      @media (max-width: 1023px) {
+        cursor: unset;
+      }
+      @media (max-width: 499px) {
+        height: 35pt;
+      }
+    }
+  }
+
+  #scores {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20pt;
+    position: relative;
+
+    @media (max-width: 499px) {
+      row-gap: 8pt;
+      align-items: baseline;
+    }
+
+    #hintOne {
+      width: max-content;
+      font-size: 18pt;
+
+      @media (max-width: 499px) {
+        font-size: 16pt;
+      }
+    }
+
+    #hintTwo {
+      width: max-content;
+      position: absolute;
+      font-size: 18pt;
+      opacity: 0;
+
+      @media (max-width: 499px) {
+        font-size: 16pt;
+      }
+    }
+
+    #hintThree {
+      width: max-content;
+      position: absolute;
+      font-size: 18pt;
+      opacity: 0;
+
+      @media (max-width: 499px) {
+        font-size: 16pt;
+      }
+    }
+
+    #hintFour {
+      width: max-content;
+      position: absolute;
+      font-size: 18pt;
+      opacity: 0;
+
+      @media (max-width: 499px) {
+        font-size: 16pt;
+      }
+    }
+
+    #hintFive {
+      width: max-content;
+      position: absolute;
+      font-size: 18pt;
+      opacity: 0;
+
+      @media (max-width: 499px) {
+        font-size: 16pt;
+      }
+    }
+
+    #hintSix {
+      width: max-content;
+      position: absolute;
+      font-size: 18pt;
+
+      @media (max-width: 499px) {
+        font-size: 16pt;
+      }
+    }
+
+    #hintSeven {
+      width: max-content;
+      position: absolute;
+      font-size: 18pt;
+      opacity: 0;
+
+      @media (max-width: 499px) {
+        font-size: 16pt;
+      }
+    }
+
+    #hintEight {
+      width: max-content;
+      position: absolute;
+      font-size: 18pt;
+      opacity: 0;
+
+      @media (max-width: 499px) {
+        font-size: 16pt;
+      }
+    }
+
+    #trails {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20pt;
+
+      @media (max-width: 499px) {
+        row-gap: 8pt;
+      }
+
+      #trailsLeft {
+        display: flex;
+        flex-direction: row;
+        font-size: 18pt;
+
+        @media (max-width: 499px) {
+          font-size: 16pt;
+        }
+      }
+
+      #highscore {
+        font-size: 18pt;
+
+        @media (max-width: 499px) {
+          font-size: 16pt;
+        }
+      }
+    }
+  }
+}

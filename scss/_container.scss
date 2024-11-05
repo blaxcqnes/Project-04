@@ -1,0 +1,10 @@
+#container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 80pt;
+  overflow: hidden;
+
+  @media (max-width: 499px) {
+    row-gap: 40pt;
+  }
+}

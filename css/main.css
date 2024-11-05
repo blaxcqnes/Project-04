@@ -1,0 +1,363 @@
+#container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 80pt;
+  overflow: hidden;
+}
+@media (max-width: 499px) {
+  #container {
+    row-gap: 40pt;
+  }
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media (max-width: 499px) {
+  #header {
+    flex-direction: column-reverse;
+    row-gap: 15pt;
+    margin-top: 10pt;
+    padding-inline: 15pt;
+    align-items: center;
+  }
+}
+#header #reset {
+  display: flex;
+  justify-content: center;
+  width: 90pt;
+  height: 35pt;
+  padding-top: 6pt;
+  font-size: 25pt;
+  font-weight: 700;
+  align-items: center;
+  border: none;
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
+}
+@media (max-width: 1023px) {
+  #header #reset {
+    cursor: unset;
+  }
+}
+#header #instruction {
+  display: flex;
+  font-size: 17pt;
+  align-items: center;
+  color: #ffffff;
+}
+
+#midSec {
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+  row-gap: 130pt;
+}
+@media (max-width: 899px) {
+  #midSec {
+    row-gap: 80pt;
+  }
+}
+#midSec #guess {
+  align-self: center;
+  font-size: 25pt;
+}
+@media (max-width: 499px) {
+  #midSec #guess {
+    font-size: 22pt;
+  }
+}
+#midSec #outputHolder {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  position: relative;
+  align-items: center;
+}
+#midSec #output {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 200pt;
+  height: 100pt;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+}
+#midSec #output #guessNum {
+  height: 50%;
+  color: #000000;
+  font-size: 70pt;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+#midSec #output #errorita {
+  position: absolute;
+  padding-top: 12pt;
+  font-size: 75pt;
+  color: #980000;
+  opacity: 0;
+}
+#midSec #output #gameOver {
+  position: absolute;
+  padding-top: 12pt;
+  font-size: 42pt;
+  color: #980000;
+  opacity: 0;
+}
+#midSec #justLine {
+  width: 100%;
+  height: 0;
+  border: 2pt solid #ffffff;
+}
+
+#footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: auto;
+  margin-top: 35pt;
+  padding-inline: 60pt;
+}
+@media (max-width: 649px) {
+  #footer {
+    -moz-column-gap: 40pt;
+         column-gap: 40pt;
+  }
+}
+@media (max-width: 499px) {
+  #footer {
+    flex-direction: column;
+    row-gap: 18pt;
+    padding-inline: 20pt;
+    margin-top: 20pt;
+  }
+}
+@media (max-width: 349px) {
+  #footer {
+    padding-inline: 10pt;
+  }
+}
+#footer #input {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20pt;
+  align-items: center;
+}
+@media (max-width: 499px) {
+  #footer #input {
+    row-gap: 15pt;
+  }
+}
+#footer #input #inputContainer {
+  width: 120pt;
+  height: 55pt;
+}
+@media (max-width: 499px) {
+  #footer #input #inputContainer {
+    height: 50pt;
+  }
+}
+#footer #input #addNum {
+  width: 120pt;
+  height: 55pt;
+  padding-top: 6pt;
+  font-size: 40pt;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2pt solid white;
+  outline: none;
+  resize: none;
+}
+#footer #input #check {
+  width: 100pt;
+  height: 40pt;
+  padding-top: 6pt;
+  font-size: 23pt;
+  font-weight: 700;
+  text-align: center;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+}
+@media (max-width: 1023px) {
+  #footer #input #check {
+    cursor: unset;
+  }
+}
+@media (max-width: 499px) {
+  #footer #input #check {
+    height: 35pt;
+  }
+}
+#footer #scores {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20pt;
+  position: relative;
+}
+@media (max-width: 499px) {
+  #footer #scores {
+    row-gap: 8pt;
+    align-items: baseline;
+  }
+}
+#footer #scores #hintOne {
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 18pt;
+}
+@media (max-width: 499px) {
+  #footer #scores #hintOne {
+    font-size: 16pt;
+  }
+}
+#footer #scores #hintTwo {
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  font-size: 18pt;
+  opacity: 0;
+}
+@media (max-width: 499px) {
+  #footer #scores #hintTwo {
+    font-size: 16pt;
+  }
+}
+#footer #scores #hintThree {
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  font-size: 18pt;
+  opacity: 0;
+}
+@media (max-width: 499px) {
+  #footer #scores #hintThree {
+    font-size: 16pt;
+  }
+}
+#footer #scores #hintFour {
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  font-size: 18pt;
+  opacity: 0;
+}
+@media (max-width: 499px) {
+  #footer #scores #hintFour {
+    font-size: 16pt;
+  }
+}
+#footer #scores #hintFive {
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  font-size: 18pt;
+  opacity: 0;
+}
+@media (max-width: 499px) {
+  #footer #scores #hintFive {
+    font-size: 16pt;
+  }
+}
+#footer #scores #hintSix {
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  font-size: 18pt;
+}
+@media (max-width: 499px) {
+  #footer #scores #hintSix {
+    font-size: 16pt;
+  }
+}
+#footer #scores #hintSeven {
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  font-size: 18pt;
+  opacity: 0;
+}
+@media (max-width: 499px) {
+  #footer #scores #hintSeven {
+    font-size: 16pt;
+  }
+}
+#footer #scores #hintEight {
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  font-size: 18pt;
+  opacity: 0;
+}
+@media (max-width: 499px) {
+  #footer #scores #hintEight {
+    font-size: 16pt;
+  }
+}
+#footer #scores #trails {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20pt;
+}
+@media (max-width: 499px) {
+  #footer #scores #trails {
+    row-gap: 8pt;
+  }
+}
+#footer #scores #trails #trailsLeft {
+  display: flex;
+  flex-direction: row;
+  font-size: 18pt;
+}
+@media (max-width: 499px) {
+  #footer #scores #trails #trailsLeft {
+    font-size: 16pt;
+  }
+}
+#footer #scores #trails #highscore {
+  font-size: 18pt;
+}
+@media (max-width: 499px) {
+  #footer #scores #trails #highscore {
+    font-size: 16pt;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "arcade";
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  color: white;
+}
+
+@font-face {
+  font-family: arcade;
+  src: url(/fonts/arcade.ttf) format("truetype");
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  padding: 20pt;
+  background-color: rgb(25, 25, 25);
+  transition: all 0.2s ease;
+}
+@media (max-width: 499px) {
+  body {
+    padding: 0;
+  }
+}/*# sourceMappingURL=main.css.map */
