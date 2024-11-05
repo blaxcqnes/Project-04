@@ -45,6 +45,14 @@
       transition: all 0.2s ease;
     }
 
+    #guessSymbol {
+      position: absolute;
+      padding-top: 30pt;
+      font-size: 90pt;
+      color: #000000;
+      opacity: 1;
+    }
+
     #errorita {
       position: absolute;
       padding-top: 12pt;
@@ -56,7 +64,7 @@
     #gameOver {
       position: absolute;
       padding-top: 12pt;
-      font-size: 42pt;
+      font-size: 38pt;
       color: #980000;
       opacity: 0;
     }

@@ -30,6 +30,7 @@ checkButton.addEventListener('click', function () {
   let text;
   let insertedValue = Number(document.querySelector('#addNum').value);
   text = insertedValue;
+  let guessSymbol = document.querySelector('#guessSymbol');
   let errorita = document.querySelector('#errorita');
   let gameOver = document.querySelector('#gameOver');
   let hintOne = document.querySelector('#hintOne');
@@ -42,6 +43,7 @@ checkButton.addEventListener('click', function () {
   let hintEight = document.querySelector('#hintEight');
 
   if (guessNum === text) {
+    guessSymbol.style.opacity = '0';
     errorita.style.opacity = '0';
     outputDisplayer.style.opacity = '1';
     body.style.backgroundColor = 'rgb(40, 80, 25)';
@@ -61,6 +63,7 @@ checkButton.addEventListener('click', function () {
         document.querySelector('#reTries').textContent;
     }
   } else if (!text) {
+    guessSymbol.style.opacity = '0';
     errorita.style.opacity = '1';
     hintEight.style.opacity = '1';
     hintOne.style.opacity = '0';
@@ -72,6 +75,7 @@ checkButton.addEventListener('click', function () {
     hintSeven.style.opacity = '0';
     body.style.backgroundColor = 'rgb(75, 5, 5)';
   } else if (text > 20) {
+    guessSymbol.style.opacity = '0';
     errorita.style.opacity = '1';
     hintTwo.style.opacity = '1';
     hintOne.style.opacity = '0';
@@ -86,6 +90,7 @@ checkButton.addEventListener('click', function () {
     outputDisplayer.style.opacity = '0';
   } else if (text < guessNum) {
     if (reTriesMax >= 1) {
+      guessSymbol.style.opacity = '1';
       errorita.style.opacity = '0';
       hintThree.style.opacity = '1';
       hintOne.style.opacity = '0';
@@ -99,6 +104,7 @@ checkButton.addEventListener('click', function () {
       body.style.backgroundColor = 'rgb(25, 25, 25)';
       outputDisplayer.style.opacity = '0';
     } else if (reTriesMax <= 0) {
+      guessSymbol.style.opacity = '0';
       errorita.style.opacity = '0';
       passNum.remove();
       gameOver.style.opacity = '1';
@@ -115,6 +121,7 @@ checkButton.addEventListener('click', function () {
     }
   } else if (text > guessNum) {
     if (reTriesMax >= 1) {
+      guessSymbol.style.opacity = '1';
       errorita.style.opacity = '0';
       hintFour.style.opacity = '1';
       hintOne.style.opacity = '0';
@@ -128,6 +135,7 @@ checkButton.addEventListener('click', function () {
       body.style.backgroundColor = 'rgb(25, 25, 25)';
       outputDisplayer.style.opacity = '0';
     } else if (reTriesMax <= 0) {
+      guessSymbol.style.opacity = '0';
       errorita.style.opacity = '0';
       passNum.remove();
       gameOver.style.opacity = '1';
@@ -153,6 +161,7 @@ againButton.addEventListener('click', function () {
   reTries.remove();
   guessNum = Math.round(Math.random() * 21);
   body.style.backgroundColor = 'rgb(25, 25, 25)';
+  guessSymbol.style.opacity = '1';
   errorita.style.opacity = '0';
   gameOver.style.opacity = '0';
 
